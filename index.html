@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // Get the URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectUrl = urlParams.get('url');
+
+    // Redirect to the specified URL
+    if (redirectUrl) {
+      window.location.replace(redirectUrl);
+    } else {
+      // If no URL parameter is provided, redirect to a default URL
+      window.location.replace('mobiledirectoryapp://NewsArticleSingle');
+    }
+  </script>
+</body>
+
+</html>
